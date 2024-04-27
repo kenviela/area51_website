@@ -1,0 +1,94 @@
+$menu-text-color: #000;
+$menu-bg-color: #f0f0f0;
+
+.NewMenu__nav{
+  position: fixed;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: $menu-bg-color;
+  transform: translateX(-350px);
+  transition: transform 0.3s;
+  padding-top: 1rem;
+  &__show{
+    transform: translateX(0.1rem);
+  }
+  &__toggle__menu{
+    
+    &__icon{
+      position: absolute;
+      left: 350px;
+      top:0;
+      margin-top: 10px;
+      width: 30px;
+      height: 30px;
+      margin-right: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 100;
+      &__show{
+        left: 290px;
+        top:0;
+      }
+    }
+  }
+  &__main__menu{
+
+    &__item{
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      & a{
+        font-size: 1.5rem;
+        color: $menu-text-color;
+        width: 200px;
+        padding: 1rem 3rem;
+        border-radius: 0 10px 10px 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .NewMenu__nav{
+    transform: translateX(-300px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .NewMenu__nav{
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .NewMenu__nav{
+    &__toggle__menu{
+      &__icon{
+        transform: translateX(260px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .NewMenu__nav{
+    &__toggle__menu{
+      &__icon{
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .NewMenu__nav{
+    &__toggle__menu{
+      &__icon{
+        display: none;
+      }
+    }
+  }
+}

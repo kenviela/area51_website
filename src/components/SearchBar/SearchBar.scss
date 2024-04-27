@@ -1,0 +1,17 @@
+@use"../../index.scss";
+.SearchBar{
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  width: 80%;
+  &__form{
+    margin:1rem;
+    width: 400px;
+  }
+  &__submit{
+    @extend .button;
+    margin:1rem;
+    width:20%;
+  }
+}

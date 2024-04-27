@@ -1,0 +1,8 @@
+@use"../../../index.scss";
+.LoginForm{
+  display:flex;
+  flex-direction: column;
+  &__submit{
+    @extend .button;
+  }
+}

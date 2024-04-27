@@ -1,0 +1,33 @@
+$darkGreen:rgba(24, 217, 53, 0.068);
+$lightGreen:#15bf2fc2;
+.Input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  &__input{
+    border-radius: 5rem;
+    margin-top: 1rem;
+    width: 95%;
+    height: 30px;
+    background-color: $darkGreen;
+    border-color: $lightGreen;
+    color:white;
+    padding-left: 11px;
+    padding-right: 11px;
+    @media screen and (min-width: 1025px) {
+      width: 40%;
+      
+    }
+  }
+  &__input::-webkit-input-placeholder {
+    text-align:start;
+    padding-left: 10px;
+  }
+
+  &__label{
+    color:white;
+    text-shadow: 3px 3px 4px #15BF2F;
+    margin-top: 23px;
+  }
+}

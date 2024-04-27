@@ -1,0 +1,65 @@
+$menu-container-width: 200px; // Ancho del menú desplegable en dispositivos móviles
+$menu-bg-color: #f0f0f0; // Color de fondo del menú
+$menu-text-color: #000; // Color del texto del menú
+$menu-toggle-icon-size: 20px; // Tamaño del icono de cierre
+
+$menu-screen-width: 768px; // Ancho de pantalla a partir del cual se considera un dispositivo móvil
+
+.menu-container {
+  position: relative;
+}
+
+.menu-toggle-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.menu-toggle {
+  display: none; // Oculta el checkbox
+}
+
+.menu-toggle-icon {
+  display: inline-block;
+  width: $menu-toggle-icon-size;
+  height: $menu-toggle-icon-size;
+  cursor: pointer;
+  background-image: url("https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395871-menu_80607.png"); // Reemplaza "icono-cerrar.png" con la ruta a tu icono de cierre
+  background-size: cover;
+
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $menu-bg-color;
+  padding: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+
+  @media (min-width: $menu-screen-width) {
+    width: $menu-container-width;
+  }
+
+  &.show {
+    transform: translateX(0);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1.7rem;
+    & li {
+        & a{
+          display: block;
+          padding: 10px;
+          color: $menu-text-color;
+          text-decoration: none;
+        }
+  }
+  }
+
+  
+}

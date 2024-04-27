@@ -1,0 +1,12 @@
+@use "../../../index.scss";
+.FormProduct{
+  &__button{
+    @extend .button;
+  }
+}
+
+.New{
+  &__title{
+    color:white;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../../index.scss";
+
+.UpdateProducts{
+  
+}
+
+.FormUpdateProducts{
+  &__submit{
+    @extend .button;
+  }
+}

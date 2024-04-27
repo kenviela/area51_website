@@ -1,0 +1,33 @@
+@use"../../index.scss";
+.Table{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  & table{
+    border: solid 1px rgba(255, 255, 255, 0.808) ;
+  }
+  & thead{
+    background: #15bf2fc2;
+    & th{
+      padding: 20px 15px;
+      font-weight: 700px;
+      text-transform: uppercase;
+    }
+  }
+  & td{
+    padding :15px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.808);
+  }
+  &__td{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__button{
+      @extend .button;
+      margin:5px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use"../../index.scss";
+
+.Home{
+  display: flex;
+  flex-direction: column;
+  margin:5rem;
+  &__button{
+    & button{
+      @extend .button;
+    }
+  }
+}

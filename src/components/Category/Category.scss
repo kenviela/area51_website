@@ -1,0 +1,26 @@
+$darkGreen:#18d93511;
+$lightGreen:#15bf2fc2;
+.Category{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__select{
+    border-radius: 5rem;
+    margin-top: 1rem;
+    width: 95%;
+    height: 30px;
+    background-color: $darkGreen;
+    border-color: $lightGreen;
+    color:rgb(99, 91, 91);
+
+    @media screen and (min-width: 1025px) {
+      width: 40%;
+    }
+  }
+  &__label{
+    color:white;
+    text-shadow: 3px 3px 4px #15BF2F;
+    margin-top: 23px;
+  }
+}

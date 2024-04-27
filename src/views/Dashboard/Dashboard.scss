@@ -1,0 +1,40 @@
+@use"../../index.scss";
+$navbar-color: hsl(0, 0%, 93%);
+.Dashboard{
+display: flex;
+&__container{
+&__header{
+  width: 120px;
+  height: 100vh;
+  background-color: #cccccca9;
+  &__url{
+    display: grid;
+    & a{
+      text-decoration: none;
+      color:rgb(27, 24, 24);
+      cursor: pointer;
+      margin-top:2rem;
+    }
+  }
+}
+}
+
+}
+.FormSearch{
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  width: 80%;
+  &__form{
+    margin:1rem;
+    width: 400px;
+  }
+  &__submit{
+    @extend .button;
+    margin:1rem;
+    width:20%;
+  }
+}
+
+
